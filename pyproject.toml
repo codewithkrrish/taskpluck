@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskpluck"
+version = "1.0.0"
+description = "Pull action items out of meeting notes and transcripts"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Krrish", email = "codewithkrrish7@gmail.com" }]
+keywords = ["meeting-notes", "action-items", "cli", "productivity", "todo"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+taskpluck = "taskpluck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/codewithkrrish/taskpluck"
+Source = "https://github.com/codewithkrrish/taskpluck"
+
+[tool.setuptools.packages.find]
+include = ["taskpluck*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
